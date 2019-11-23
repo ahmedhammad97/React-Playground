@@ -5,8 +5,8 @@ import SecondComponent from './second';
 function App() {
   return (
     <div className="App">
-      <FirstComponent />
-      <SecondComponent />
+      <FirstComponent heading="What a heading!!" />
+      <SecondComponent paragraph="Just a simple paragraph." />
     </div>
   );
 }

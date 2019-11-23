@@ -1,9 +1,9 @@
 import React from 'react';
 
-function FirstComponent() {
+function FirstComponent(props) {
   return (
     <div className="FirstComponent">
-      <h1>What a heading!</h1>
+      <h1>{props.heading}</h1>
     </div>
   );
 }

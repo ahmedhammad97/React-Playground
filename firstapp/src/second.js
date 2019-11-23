@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SecondComponent() {
+function SecondComponent(props) {
   return (
     <div className="SecondComponent">
-      <p>Here's a simple plain paragraph</p>
+      <p>{ props.paragraph }</p>
     </div>
   );
 }
