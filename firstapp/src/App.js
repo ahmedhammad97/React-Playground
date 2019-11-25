@@ -1,15 +1,25 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Navbar from './components/navbar';
 import FirstComponent from './components/first';
 import SecondComponent from './components/second';
 import ContainerComponent from './components/container';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <FirstComponent heading="What a heading!!" />
-      <SecondComponent paragraph="Just a simple paragraph." />
-      <ContainerComponent label="Time now is: " />
+      <Navbar />
+      {/* Use the keyword "exact" to prevent nesting routes */}
+      <Route path="/first" 
+        render={props => <FirstComponent heading="Heading inside a router!" />} 
+      />
+      <Route path="/second" 
+        render={props => <SecondComponent paragraph="Paragraph inside a router!" />} 
+      />
+      <Route path="/container" component={ContainerComponent} /> 
     </div>
+    </BrowserRouter>
   );
 }
 
