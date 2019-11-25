@@ -1,7 +1,7 @@
 import React from 'react';
-import FirstComponent from './first';
-import SecondComponent from './second';
-import ContainerComponent from './container';
+import FirstComponent from './components/first';
+import SecondComponent from './components/second';
+import ContainerComponent from './components/container';
 
 function App() {
   return (
